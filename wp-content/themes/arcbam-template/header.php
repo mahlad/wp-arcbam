@@ -4,7 +4,8 @@
 	<meta charset="UTF-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
 	<title>
-		<?php 
+		<?php
+		wp_title('|', true,'right'); 
 		$site_description=get_bloginfo('description','display');
 		if($site_description&&(is_home()||is_front_page()))
 			echo $site_description.'-';
