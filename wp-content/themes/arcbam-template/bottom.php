@@ -12,7 +12,7 @@
 			$post_types=get_post_types($args,'names','and');
 			echo '<li class="home left"><a href="./" title="">صفحه اصلی</a> </li>';
 			foreach ($post_types as $ptype) {
-				echo '<li class="left"><a href="?task=link" title="">صفحه اصلی</a>'.$ptype.' </li>';
+				echo '<li class="left"><a href="?task=link" title="">'.$ptype.' </a></li>';
 			}
 			 ?>
 			
