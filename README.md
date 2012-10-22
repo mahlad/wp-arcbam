@@ -19,7 +19,6 @@
   <li>javascript</li>
   <li>PHP</li>
   <li>Wordpress</li>
-  <li>javascript</li>
 </ul>
 <b>The Team:</b>
 <ul>
