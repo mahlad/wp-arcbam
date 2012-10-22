@@ -1,10 +1,10 @@
 <?php 
-	include 'header.php';
-	include 'sidebar.php';
-	include 'bottom.php';
-	include 'content-page.php';
+	get_header();
+	get_sidebar();
+	get_template_part('bottom');
+	get_template_part('content','page');
 ?>
 
 <?php
-	include 'footer.php';
+	get_footer();
  ?>
