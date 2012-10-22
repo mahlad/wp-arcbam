@@ -22,28 +22,28 @@ div.sidebar{
 	left: 0;
 }
 li.pone{
-	background: url(../images/puzzel-1.jpg) no-repeat 0 0;
+	background:no-repeat 0 0;
 	width: 98px;
 	height: 433px;
 	top: 0;
 	left: 0;
 }
 li.ptow{
-	background: url(../images/puzzel-2.jpg) no-repeat 0 0;
+	background:no-repeat 0 0;
 	width: 73px;
 	height: 433px;
 	top: 25px;
 	left: 105px;
 }
 li.pthree{
-	background: url(../images/puzzel-3.jpg) no-repeat 0 0;
+	background:no-repeat 0 0;
 	width: 54px;
 	height: 433px;
 	top: 60px;
 	left: 185px;
 }
 li.pfour{
-	background: url(../images/puzzel-4.jpg) no-repeat 0 0;
+	background:no-repeat 0 0;
 	width: 36px;
 	height: 433px;
 	top: 86px;
