@@ -1,3 +1,6 @@
+<?php 
+
+ ?>
 <div class="homecontent overhidden relative">
 	<?php 
 	echo $post->ID;
