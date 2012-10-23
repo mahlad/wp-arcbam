@@ -1,4 +1,5 @@
 <?php 
+/*-----------Marketting Post type----------*/
 add_action('init','creat_marketting_type');
 function creat_marketting_type(){
 	$lables_mr=array(
@@ -28,7 +29,7 @@ function creat_marketting_type(){
 		'menu_position' => 25,
 		'capability_type' => 'post',
 		'hierarchical' => false,
-		'supports' => array('title','author','thumbnail','excerpt'),
+		'supports' => array('title','thumbnail'),
 		'rewrite' => array('slug' => 'marketting'),
 		'has_archive' => true,
 		'query_var' => true,
@@ -36,6 +37,30 @@ function creat_marketting_type(){
 
 		);
 	register_post_type('marketting', $args_mr);
+	add_post_type_support( 'marketting', 'thumbnail' );
 }
-
+/*--------Upload Metaboxe---------*/
+add_action('post_edit_form_tag','update_edit_form');
+add_action('load-post.php','upload_metabox_setup');
+add_action('load-post-new.php', 'upload_metabox_setup' );
+add_action('save_post','metabox_save',10,1);
+function update_edit_form(){
+	echo 'enctype="multipart/form-data"';
+}
+function upload_metabox_setup(){
+	add_meta_box(
+		'upload',
+		'لوگوی شرکت',
+		'upload_metabox_content',
+		'marketting',
+		'advanced',
+		);
+}
+function upload_metabox_content($object){
+	$up_picture=get_post_meta($object->ID,'up_picture',true);
+	if($up_picture['url']){
+		$img=$up_picture['url'];
+		echo '<div id="up_picture"><a href="'.$img.'" target="_blank"><img src="'.$img.'"></a></div>';
+	}
+}
  ?>
