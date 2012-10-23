@@ -454,6 +454,7 @@ div.parentli div.text a{
 	padding: 27px 23px;
 }
 div.parentli div.pic {
+	background-color: #ECD2BE;
 }
 div.parentli:hover div{
 	z-index:15;
@@ -472,6 +473,7 @@ div.parentli:hover div.pic {
 	-o-transform : rotateY(180deg);
 	-ms-transform : rotateY(180deg);
 	transform : rotateY(180deg);
+	background-color: none;
 }
 div.dark{
 	position: fixed;
