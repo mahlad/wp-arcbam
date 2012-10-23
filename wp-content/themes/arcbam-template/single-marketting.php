@@ -2,112 +2,59 @@
 	get_header();
 	//get_sidebar();
 	get_template_part('bottom');
-	$args = array( 'post_type' => 'marketting', 'posts_per_page' => 5 );
+	$args = array( 'post_type' => 'marketting', 'posts_per_page' => 9,'post_status' =>	'publish', );
 	$list_postid=array();
+	$list_logo=array();
+	$list_fullimg=array();
+	$list_title=array();
 	$counter=0;
 	$loop = new WP_Query( $args );
 	while ( $loop->have_posts() ) : $loop->the_post();
 		$list_postid[$counter]=$post->ID;
+		$list_logo[$counter]=wp_get_attachment_url( get_post_thumbnail_id($post->ID));
+		$logo=get_post_meta($post->ID,'profile_picture',true);
+		$list_fullimg[$counter]=$logo['url'];
+		$list_title[$counter]=get_the_title($post->ID);
 		$counter++;
+
 	endwhile;
-	//print_r($list_postid);
+	//echo $list_fullimg[0];
+	
 ?>
 <div class="content">
 	<div class="marketting relative right">
-		<div class="firstrow absolute">
-			<div class="parentli right">
-				<div class="pic">
-					<?php 
-					$profile_picture =  get_post_meta( $post->ID, 'profile_picture', true );
-					if($profile_picture['url']){
-						$img = $profile_picture['url'];
-						echo '<div id="profile_picture"><a href="'.$img.'" target="_blank"><img src="'.$img.'"></a>
-						</div>
-						<br />';
-					}
-					?>
+		<?php 
+		$classes=array('firstrow','secondrow','thirdrow','fourthrow');
+		$cnt=0;
+		$ent=1;
+		$rnt=0;
+		foreach ($classes as $class) {
+			echo "<div class='$class absolute'>
+				<div class='parentli right'>
+					<div class='pic'><img src='{$list_logo[$cnt]}' alt=''></div>
+					<div class='text'><a href='' title=''>$cnt
+					</a></div>
 				</div>
-				<div class="text"><a href="images/marketting/mrkt.jpg" title=""><?php echo $list_postid[0]; ?>برای آشنایی بیشتر با شرکت ...کلیک کنید</a></div>
-			</div>
-			<div class="parentli right">
-				<div class="pic">
-					<a href="images/marketting/mrkt.jpg" title=""><?php 
-						$profile_picture =  get_post_meta( $list_postid[0], 'profile_picture', true );
-					if($profile_picture['url']){
-						$img = $profile_picture['url'];
-						echo '<div id="profile_picture"><a href="'.$img.'" target="_blank"><img src="'.$img.'"></a>
-						</div>
-						<br />';
-					}
-					 ?></a>
-				</div>
-				<div class="text"><a href="images/marketting/mrkt.jpg" title=""><?php echo $list_postid[1]; ?>برای آشنایی بیشتر با شرکت2 ...کلیک کنید</a></div>
-			</div>
-			<div class="cover"></div>
-		</div>
-		<div class="cover"></div>
-		<div class="secondrow absolute">
-			<div class="parentli right">
-				<div class="pic">
-					<a href="images/marketting/mrkt.jpg" title=""><?php 
-						$profile_picture =  get_post_meta( $list_postid[1], 'profile_picture', true );
-					if($profile_picture['url']){
-						$img = $profile_picture['url'];
-						echo '<div id="profile_picture"><a href="'.$img.'" target="_blank"><img src="'.$img.'"></a>
-						</div>
-						<br />';
-					}
-					 ?></a>
-				</div>
-				<div class="text"><a href="images/marketting/mrkt.jpg" title="">برای آشنایی بیشتر با شرکت ...کلیک کنید</a></div>
-			</div>
-			<div class="parentli right">
-				<div class="pic">
-					<a href="images/marketting/mrkt.jpg" title=""><img src="images/marketting/small/logos-icon.jpg" alt=""></a>
-				</div>
-				<div class="text"><a href="images/marketting/mrkt.jpg" title="">برای آشنایی بیشتر با شرکت ...کلیک کنید</a></div>
-			</div>
-			<div class="cover"></div>
-		</div>
-		<div class="cover"></div>
-		<div class="thirdrow absolute">
-			<div class="parentli right">
-				<div class="pic">
-					<a href="images/marketting/mrkt.jpg" title=""><img src="images/marketting/small/logos-icon.jpg" alt=""></a>
-				</div>
-				<div class="text"><a href="images/marketting/mrkt.jpg" title="">برای آشنایی بیشتر با شرکت ...کلیک کنید</a></div>
-			</div>
-			<div class="parentli right">
-				<div class="pic">
-					<a href="images/marketting/mrkt.jpg" title=""><img src="images/marketting/small/logos-icon.jpg" alt=""></a>
-				</div>
-				<div class="text"><a href="images/marketting/mrkt.jpg" title="">برای آشنایی بیشتر با شرکت ...کلیک کنید</a></div>
-			</div>
-			<div class="parentli right">
-				<div class="pic">
-					<a href="images/marketting/mrkt.jpg" title=""><img src="images/marketting/small/logos-icon.jpg" alt=""></a>
-				</div>
-				<div class="text"><a href="images/marketting/mrkt.jpg" title="">برای آشنایی بیشتر با شرکت ...کلیک کنید</a></div>
-			</div>
-			<div class="cover"></div>
-		</div>
-		<div class="cover"></div>
-		<div class="fourthrow absolute">
-			<div class="parentli right">
-				<div class="pic">
-					<a href="images/marketting/mrkt.jpg" title=""><img src="images/marketting/small/logos-icon.jpg" alt=""></a>
-				</div>
-				<div class="text"><a href="images/marketting/mrkt.jpg" title="">برای آشنایی بیشتر با شرکت ...کلیک کنید</a></div>
-			</div>
-			<div class="parentli right">
-				<div class="pic">
-					<a href="images/marketting/mrkt.jpg" title=""><img src="images/marketting/small/logos-icon.jpg" alt=""></a>
-				</div>
-				<div class="text"><a href="images/marketting/mrkt.jpg" title="">برای آشنایی بیشتر با شرکت ...کلیک کنید</a></div>
-			</div>
-			<div class="cover"></div>
-		</div>
-		<div class="cover"></div>
+				<div class='parentli right'>
+					<div class='pic'><img src='{$list_logo[$ent]}' alt=''></div>
+					<div class='text'><a href='' title=''>$ent
+					</a></div>
+				</div>";
+			if($class=='thirdrow'){
+				if($cnt%4==0){$rnt=$cnt+=2;}
+				echo "
+				<div class='parentli right'>
+					<div class='pic'><img src='{$list_logo[$rnt]}' alt=''></div>
+					<div class='text'><a href='' title=''>$rnt
+				</a></div>
+			</div>";
+			}
+			echo "</div>";
+			$cnt+=2;
+			$ent+=2;
+		}
+		
+		 ?>
 		
 	</div>
 
