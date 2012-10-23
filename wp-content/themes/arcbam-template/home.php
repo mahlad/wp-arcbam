@@ -5,16 +5,19 @@
  ?>
 <div class="homecontent overhidden relative">
 	<?php 
-		$path=get_bloginfo('template_url')."/images/fadeloop";
-		echo $path;
-		// $img_arr=scandir($path);
-		// foreach ($img_arr as $imag) {
-		// 	$img_type=explode('.',$imag);
-		// 	$img_type=strtolower(end($img_type));
-		// 	if($img_type=='jpg'){
-		// 	echo '<div class="fade absolute"><img src="$path/$imag" alt="$imag"></div>';
-		// 	}
-		// }
+	echo $post->ID;
+		$args=array(
+			'post_mime_type' => 'image',
+			'post_parent' => $post->ID,
+			'post_type' => 'attachment'
+			);
+		$images=get_children($args);
+		if($images){
+			foreach ($images as $img) {
+				$full_imag=wp_get_attachment_image($img->ID,'full',$img->post_title);
+				echo "<div class='fade absolute'>$full_imag</div>";
+			}
+		}
 	 ?>
 	
 </div>
