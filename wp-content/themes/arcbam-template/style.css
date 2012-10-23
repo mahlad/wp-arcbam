@@ -171,7 +171,7 @@ li.pfour{
 }
 /*-------------Bottom Part--------------*/
 .bottom{
-	background: url('../images/footer-bg.png') no-repeat center bottom;
+	background:no-repeat center bottom;
 	width: 950px;
 	height:496px;
 	z-index: 10;
