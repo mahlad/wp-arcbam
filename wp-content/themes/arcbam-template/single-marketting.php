@@ -32,12 +32,12 @@
 			echo "<div class='$class absolute'>
 				<div class='parentli right'>
 					<div class='pic'><img src='{$list_logo[$cnt]}' alt=''></div>
-					<div class='text'><a href='' title=''>$cnt
+					<div class='text'><a href='' title=''>{$list_title[$cnt]}
 					</a></div>
 				</div>
 				<div class='parentli right'>
 					<div class='pic'><img src='{$list_logo[$ent]}' alt=''></div>
-					<div class='text'><a href='' title=''>$ent
+					<div class='text'><a href='' title=''>{$list_title[$ent]}
 					</a></div>
 				</div>";
 			if($class=='thirdrow'){
@@ -45,7 +45,7 @@
 				echo "
 				<div class='parentli right'>
 					<div class='pic'><img src='{$list_logo[$rnt]}' alt=''></div>
-					<div class='text'><a href='' title=''>$rnt
+					<div class='text'><a href='' title=''>{$list_title[$rnt]}
 				</a></div>
 			</div>";
 			}
