@@ -1,6 +1,6 @@
-<div class="bottom">
+<div class="bottom" style="background-image:url('<?php bloginfo('template_url'); ?>/images/footer-bg.png')">
 	<div class="logo left">
-		<img src="images/logo.png" alt="">
+		<img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="">
 	</div>
 	<nav class="right">
 		<ul>
