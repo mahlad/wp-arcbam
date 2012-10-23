@@ -28,8 +28,8 @@ function creat_marketting_type(){
 		'show_in_menu' => true,
 		'menu_position' => 25,
 		'capability_type' => 'post',
-		'hierarchical' => false,
-		'supports' => array('title','thumbnail'),
+		'hierarchical' => true,
+		'supports' => array('title','thumbnail','page-attributes'),
 		'rewrite' => array('slug' => 'marketting'),
 		'has_archive' => true,
 		'query_var' => true,
@@ -63,8 +63,8 @@ function metabox_setup() {
 	);
 }
 
-function metabox_content($object){
-	$profile_picture =  get_post_meta( $object->ID, 'profile_picture', true );
+function metabox_content($post){
+	$profile_picture =  get_post_meta( $post->ID, 'profile_picture', true );
 	if($profile_picture['url']){
 		$img = $profile_picture['url'];
 		echo '<div id="profile_picture"><a href="'.$img.'" target="_blank"><img src="'.$img.'"></a>
