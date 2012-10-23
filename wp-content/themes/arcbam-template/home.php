@@ -1,8 +1,3 @@
-<?php 
-/*
-	template name: پروژه های منتخب
-*/
- ?>
 <div class="homecontent overhidden relative">
 	<?php 
 	echo $post->ID;
