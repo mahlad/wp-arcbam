@@ -1,9 +1,5 @@
-<?php 
-
- ?>
 <div class="homecontent overhidden relative">
 	<?php 
-	echo $post->ID;
 		$args=array(
 			'post_mime_type' => 'image',
 			'post_parent' => $post->ID,
