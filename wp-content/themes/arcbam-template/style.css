@@ -183,53 +183,59 @@ div.bottom div.logo{
 	margin-top: 250px;
 }
 div.bottom nav{
-	margin-top:360px;
+	margin-top:375px;
 
 }
 div.bottom nav ul{
 	padding: 5px;
 }
 div.bottom nav ul li.home{
-	background: url(../images/asli.png) no-repeat 0 0;
+	background: no-repeat 0 0;
 	width:121px;
 	height: 119px;
 }
 div.bottom nav ul li.home a{
-	margin-top: 11px;
+	margin-top: 17px;
 }
 div.bottom nav ul li.project{
-	background: url(../images/galery.png) no-repeat 0 0;
+	background:no-repeat 0 0;
 	width:107px;
 	height: 106px;
 	margin-top: 8px;
 
 }
 div.bottom nav ul li.project a{
-	margin-top: 6px;
+	margin-top: 9px;
 
 }
 div.bottom nav ul li.marketting{
-	background: url(../images/tablighat.png) no-repeat 0 0;
+	background:no-repeat 0 0;
 	width:100px;
 	height: 98px;
 	margin-top: 12px;
 
 }
 div.bottom nav ul li.marketting a{
-	margin-top: 2px;
+	margin-top: 5px;
 }
 div.bottom nav ul li.learn{
-	background: url(../images/maghalat.png) no-repeat 0 0;
+	background:no-repeat 0 0;
 	width:95px;
 	height: 92px;
-	margin-top: 12px;
+	margin-top: 14px;
 
 }
+div.bottom nav ul li.learn a{
+	margin-top: 2px;
+}
 div.bottom nav ul li.contact{
-	background: url(../images/tamasbama-.png) no-repeat 0 0;
+	background:no-repeat 0 0;
 	width:88px;
 	height: 88px;
 	margin-top: 11px;
+}
+div.bottom nav ul li.contact a{
+	margin-top: 5px;
 }
 div.bottom nav ul li a{
 	display: block;
