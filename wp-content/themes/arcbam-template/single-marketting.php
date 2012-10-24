@@ -2,7 +2,7 @@
 	get_header();
 	get_sidebar();
 	get_template_part('bottom');
-	$args = array( 'post_type' => 'marketting', 'posts_per_page' => 9,'post_status' =>	'publish', );
+	$args = array( 'post_type' => 'marketting', 'posts_per_page' => 9,'post_status' =>	'publish' );
 	$list_postid=array();
 	$list_logo=array();
 	$list_fullimg=array();
