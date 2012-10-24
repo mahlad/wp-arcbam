@@ -1,8 +1,10 @@
 <?php 
+/*-----------General Settings----------*/
+add_theme_support('post-thumbnails');
 /*-----------Marketting Post type----------*/
 add_action('init','creat_marketting_type');
 function creat_marketting_type(){
-	$lables_mr=array(
+	$labels_mr=array(
 		'name' => 'تبلیغات',
 		'singular_name' => 'تبلیغات',
 		'add_new' => 'افزودن تبلیغات',
@@ -18,7 +20,7 @@ function creat_marketting_type(){
 		);
 	$args_mr=array(
 		'label' => 'تبلیغات',
-		'labels' => $lables_mr,
+		'labels' => $labels_mr,
 		'description' => 'این قسمت برای تبلیغات شرکت ها طراحی شده است',
 		'public' => true,
 		'exclude_from_search' => true,
@@ -38,7 +40,7 @@ function creat_marketting_type(){
 		);
 	register_post_type('marketting', $args_mr);
 	add_post_type_support( 'marketting', 'thumbnail' );
-	add_theme_support('post-thumbnails');
+	
 }
 /*--------Upload Metaboxe---------*/
 
@@ -97,5 +99,10 @@ function metabox_save($post_id){
 		}
 	} 
 }
-
+/*-----------Learn(Articles) Post type----------*/
+add_action('init','craet_learn_type'); 
+function craet_learn_type(){
+	$labels_ln=array();
+	$args_ln=array();
+}
  ?>
