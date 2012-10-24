@@ -63,14 +63,7 @@ function metabox_setup() {
 		'advanced',		
 		'high'	
 	);
-	// add_meta_box(
-	// 	'gsp_post_meta2',
-	// 	'فایل متن کامل',	
-	// 	'metabox_content',		
-	// 	'learn',				
-	// 	'advanced',		
-	// 	'high'	
-	// );
+
 }
 
 function metabox_content($post){
@@ -138,46 +131,12 @@ function craet_learn_type(){
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'supports' => array('title','editor','excerpt','comments'),
-		'rewrite' => array('slug' => 'learning'),
+		'rewrite' => array('slug' => 'learn'),
 		'has_archive' => true,
 		'query_var' => true,
 		'can_export' => true,
 
 		);
-	register_post_type('learning', $args_ln);
+	register_post_type('learn', $args_ln);
 }
 /*--------Upload File Metaboxe---------*/
-add_action('add_meta_boxes','uplod_file_meta');
-add_action('save_post','save_upload_file_meta');
-function uplod_file_meta(){
-	add_meta_box('up_file','فایل متن کامل','inner_file_meta','learning','advanced','default');
-}
-function inner_file_meta($post){
-	
-	wp_nonce_field(plugin_basename(__FILE__), 'wpnonce');
-	$post_id=$post->ID;
-	$_file=get_post_meta($post_id,'url_file',true);
-	$url_file=$_file['url'];
-
-?>
-  <input type="file" id="url_file" name="url_file" value="<?php echo $url_file; ?>" size="45"/>
- <?php 
- echo $_POST['url_file'][0].'fdf';
-}
-function save_upload_file_meta($post_id){
-	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
-      return;
-	if(!wp_nonce_field(plugin_basename(__FILE__), 'wpnonce'))
-		return;
-	if('learning'==$_POST['post_type']){
-		if(is_admin()){
-			$url_file=$_POST['url_file'];
-			update_post_meta($post_id,'url_file',$url_file);
-		}
-		else
-			return;
-	}else 
-	return;
-}
-
- ?>
