@@ -587,19 +587,23 @@ section.part div.line{
 section.right div.line{
 	border-right: 0;
 }
-section.right:first-child div.line{
-	padding-top: 0;
-}
 section.part div.pic{
 	width: auto;
-	height: 79px;
+	height: 20px;
 	margin-bottom:10px; 
 }
-section.part p.context{
+section.part div.context p{
 	width: 260px;
-	height: 79px;
+	height: 138px;
 	color: #3F2A16 ;
-	line-height: 20px;	
+	line-height: 20px;
+	direction:rtl;	
+}
+section.part h1{
+	font-size: 16px;
+	color: #3F2A16 ;
+	font-weight: bold;
+	line-height: 20px;
 }
 section.part a.download{
 	width:85px;
