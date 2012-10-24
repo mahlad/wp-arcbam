@@ -4,7 +4,7 @@ add_theme_support('post-thumbnails');
 /*-----------Marketting Post type----------*/
 add_action('init','creat_marketting_type');
 function creat_marketting_type(){
-	$labels_mr=array(
+	$labels=array(
 		'name' => 'تبلیغات',
 		'singular_name' => 'تبلیغات',
 		'add_new' => 'افزودن تبلیغ',
@@ -18,9 +18,9 @@ function creat_marketting_type(){
 		'parent_item_colon' => 'تبلیغ',
 		'menu_name' => 'تبلیغات'
 		);
-	$args_mr=array(
+	$args=array(
 		'label' => 'تبلیغات',
-		'labels' => $labels_mr,
+		'labels' => $labels,
 		'description' => 'این قسمت برای تبلیغات شرکت ها طراحی شده است',
 		'public' => true,
 		'exclude_from_search' => true,
@@ -38,7 +38,7 @@ function creat_marketting_type(){
 		'can_export' => true,
 
 		);
-	register_post_type('marketting', $args_mr);
+	register_post_type('marketting', $args);
 	add_post_type_support( 'marketting', 'thumbnail' );
 	
 }
@@ -103,7 +103,7 @@ function metabox_save($post_id){
 /*-----------Learn(Articles) Post type----------*/
 add_action('init','craet_learn_type'); 
 function craet_learn_type(){
-	$labels_ln=array(
+	$labels=array(
 		'name' => 'آموزش',
 		'singular_name' => 'آموزش',
 		'add_new' => 'افزودن مقاله(خبر)',
@@ -117,9 +117,9 @@ function craet_learn_type(){
 		'parent_item_colon' => 'مقاله(خبر)',
 		'menu_name' => 'آموزش'
 		);
-	$args_ln=array(
+	$args=array(
 		'label' => 'آموزش',
-		'labels' => $labels_ln,
+		'labels' => $labels,
 		'description' => 'در این قسمت می توان مقالات آموزشی یا اخبار جدید را قرار داد',
 		'public' => true,
 		'exclude_from_search' => true,
@@ -137,5 +137,15 @@ function craet_learn_type(){
 		'can_export' => true,
 
 		);
-	register_post_type('learn', $args_ln);
+	register_post_type('learn', $args);
+}
+/*-----------Contact Post type----------*/
+add_action('init','craet_contact_type');
+function craet_contact_type(){
+	$labels=array(
+
+		);
+	$args=array(
+
+		);
 }
