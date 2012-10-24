@@ -8,7 +8,7 @@
 			<li class="project left" style="background-image:url(<?php bloginfo('template_url'); ?>/images/galery.png)"><a href="projects.php" title="">پروژه ها</a> </li>
 			<li class="marketting left" style="background-image:url(<?php bloginfo('template_url'); ?>/images/tablighat.png)"><a href="http://localhost/mahlad-wp-arcbam/marketting/تبلیغات" title="">تبلیغات</a> </li>
 			<li class="learn left" style="background-image:url(<?php bloginfo('template_url'); ?>/images/maghalat.png)"><a href=" http://localhost/mahlad-wp-arcbam/learn/آموزش/" title="">آموزش</a> </li>
-			<li class="contact left" style="background-image:url(<?php bloginfo('template_url'); ?>/images/tamasbama.png)"><a href="contact.php" title="">تماس با ما</a> </li>
+			<li class="contact left" style="background-image:url(<?php bloginfo('template_url'); ?>/images/tamasbama.png)"><a href="http://localhost/mahlad-wp-arcbam/contact/تماس-با-ما/" title="">تماس با ما</a> </li>
 			<?php 
 			// $args=array(
 			// 	'public' => true,
