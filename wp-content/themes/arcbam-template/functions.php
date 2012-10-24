@@ -139,4 +139,3 @@ function craet_learn_type(){
 		);
 	register_post_type('learn', $args_ln);
 }
-/*--------Upload File Metaboxe---------*/
