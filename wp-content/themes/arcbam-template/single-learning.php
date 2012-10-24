@@ -2,125 +2,30 @@
 	get_header();
 	get_sidebar();
 	get_template_part('bottom');
-	
+	$args=array('post_type'=>'learn','post_status' =>	'publish');
+	$loop= new WP_Query($args);
 ?>
 <div class="content">
 	<div class="learning right">
 		<?php 
-
+		$counter=0;
+		while($loop->have_posts()):$loop->the_post();
+			if($counter%2==0)
+				$clas='right';
+			else
+				$clas='left';
+			echo "
+			<section class='part $clas'>
+				<div class='line'>
+					<div class='pic right'>
+						the_title('<h1>','</h1>')
+					</div>
+				</div>
+			</div>";
+			$counter++;
+		endwhile;
 		 ?>
-		<section class="part right">
-			<div class="line">
-			<div class="pic right">
-				
-			</div>
-			<p class="context right overhidden txj">
-				امروزه تغييرات وتحولات مربوط به علم وپيشرفتهاي شگرف بشر در زمينه هاي مختلف علمي  ازچند دهه به هفته وياچند دقيقه كاهش پيدانموده است ودراين زمان اهميت وضرورت ارتقاء استاندارها ومديرت بهينه امكانات ونيروها در راستاي توسعه وبهبود هرچه بيشتر دستاوردهاي مختلف درپروژه هاي گوناگون بسيار نمايان تر شده است.
-			</p>
-			<a href="#" class="download left">دریافت متن کامل</a>
-			</div>
-		</section>
-		<section class="part left">
-			<div class="line">
-			<div class="pic right">
-				
-			</div>
-			<p class="context right overhidden txj">
-				امروزه تغييرات وتحولات مربوط به علم وپيشرفتهاي شگرف بشر در زمينه هاي مختلف علمي  ازچند دهه به هفته وياچند دقيقه كاهش پيدانموده است ودراين زمان اهميت وضرورت ارتقاء استاندارها ومديرت بهينه امكانات ونيروها در راستاي توسعه وبهبود هرچه بيشتر دستاوردهاي مختلف درپروژه هاي گوناگون بسيار نمايان تر شده است.
-
-			</p>
-			<a href="#" class="download left">دریافت متن کامل</a>
-			</div>
-		</section>
-
-		<section class="part right">
-			<div class="line">
-			<div class="pic right">
-				
-			</div>
-			<p class="context right overhidden txj">
-				امروزه تغييرات وتحولات مربوط به علم وپيشرفتهاي شگرف بشر در زمينه هاي مختلف علمي  ازچند دهه به هفته وياچند دقيقه كاهش پيدانموده است ودراين زمان اهميت وضرورت ارتقاء استاندارها ومديرت بهينه امكانات ونيروها در راستاي توسعه وبهبود هرچه بيشتر دستاوردهاي مختلف درپروژه هاي گوناگون بسيار نمايان تر شده است.
-			</p>
-			<a href="#" class="download left">دریافت متن کامل</a>
-			</div>
-		</section>
-		<section class="part left">
-			<div class="line">
-			<div class="pic right">
-				
-			</div>
-			<p class="context right overhidden txj">
-				امروزه تغييرات وتحولات مربوط به علم وپيشرفتهاي شگرف بشر در زمينه هاي مختلف علمي  ازچند دهه به هفته وياچند دقيقه كاهش پيدانموده است ودراين زمان اهميت وضرورت ارتقاء استاندارها ومديرت بهينه امكانات ونيروها در راستاي توسعه وبهبود هرچه بيشتر دستاوردهاي مختلف درپروژه هاي گوناگون بسيار نمايان تر شده است.
-			</p>
-			<a href="#" class="download left">دریافت متن کامل</a>
-			</div>
-		</section>
-		<section class="part right">
-			<div class="line">
-			<div class="pic right">
-				
-			</div>
-			<p class="context right overhidden txj">
-				امروزه تغييرات وتحولات مربوط به علم وپيشرفتهاي شگرف بشر در زمينه هاي مختلف علمي  ازچند دهه به هفته وياچند دقيقه كاهش پيدانموده است ودراين زمان اهميت وضرورت ارتقاء استاندارها ومديرت بهينه امكانات ونيروها در راستاي توسعه وبهبود هرچه بيشتر دستاوردهاي مختلف درپروژه هاي گوناگون بسيار نمايان تر شده است.
-			</p>
-			<a href="#" class="download left">دریافت متن کامل</a>
-			</div>
-		</section>
-		<section class="part left">
-			<div class="line">
-			<div class="pic right">
-				
-			</div>
-			<p class="context right overhidden txj">
-				امروزه تغييرات وتحولات مربوط به علم وپيشرفتهاي شگرف بشر در زمينه هاي مختلف علمي  ازچند دهه به هفته وياچند دقيقه كاهش پيدانموده است ودراين زمان اهميت وضرورت ارتقاء استاندارها ومديرت بهينه امكانات ونيروها در راستاي توسعه وبهبود هرچه بيشتر دستاوردهاي مختلف درپروژه هاي گوناگون بسيار نمايان تر شده است.
-			</p>
-			<a href="#" class="download left">دریافت متن کامل</a>
-			</div>
-		</section>
-		<section class="part right">
-			<div class="line">
-			<div class="pic right">
-				
-			</div>
-			<p class="context right overhidden txj">
-				امروزه تغييرات وتحولات مربوط به علم وپيشرفتهاي شگرف بشر در زمينه هاي مختلف علمي  ازچند دهه به هفته وياچند دقيقه كاهش پيدانموده است ودراين زمان اهميت وضرورت ارتقاء استاندارها ومديرت بهينه امكانات ونيروها در راستاي توسعه وبهبود هرچه بيشتر دستاوردهاي مختلف درپروژه هاي گوناگون بسيار نمايان تر شده است.
-			</p>
-			<a href="#" class="download left">دریافت متن کامل</a>
-			</div>
-		</section>
-		<section class="part left">
-			<div class="line">
-			<div class="pic right">
-				
-			</div>
-			<p class="context right overhidden txj">
-				امروزه تغييرات وتحولات مربوط به علم وپيشرفتهاي شگرف بشر در زمينه هاي مختلف علمي  ازچند دهه به هفته وياچند دقيقه كاهش پيدانموده است ودراين زمان اهميت وضرورت ارتقاء استاندارها ومديرت بهينه امكانات ونيروها در راستاي توسعه وبهبود هرچه بيشتر دستاوردهاي مختلف درپروژه هاي گوناگون بسيار نمايان تر شده است.
-			</p>
-			<a href="#" class="download left">دریافت متن کامل</a>
-			</div>
-		</section>
-		<section class="part right">
-			<div class="line">
-			<div class="pic right">
-				
-			</div>
-			<p class="context right overhidden txj">
-				امروزه تغييرات وتحولات مربوط به علم وپيشرفتهاي شگرف بشر در زمينه هاي مختلف علمي  ازچند دهه به هفته وياچند دقيقه كاهش پيدانموده است ودراين زمان اهميت وضرورت ارتقاء استاندارها ومديرت بهينه امكانات ونيروها در راستاي توسعه وبهبود هرچه بيشتر دستاوردهاي مختلف درپروژه هاي گوناگون بسيار نمايان تر شده است.
-			</p>
-			<a href="#" class="download left">دریافت متن کامل</a>
-			</div>
-		</section>
-		<section class="part left">
-			<div class="line">
-			<div class="pic right">
-				
-			</div>
-			<p class="context right overhidden txj">
-				امروزه تغييرات وتحولات مربوط به علم وپيشرفتهاي شگرف بشر در زمينه هاي مختلف علمي  ازچند دهه به هفته وياچند دقيقه كاهش پيدانموده است ودراين زمان اهميت وضرورت ارتقاء استاندارها ومديرت بهينه امكانات ونيروها در راستاي توسعه وبهبود هرچه بيشتر دستاوردهاي مختلف درپروژه هاي گوناگون بسيار نمايان تر شده است.
-			</p>
-			<a href="#" class="download left">دریافت متن کامل</a>
-			</div>
-		</section>
+		
 	</div>	
 
 </div>
