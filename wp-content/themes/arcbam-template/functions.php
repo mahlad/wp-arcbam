@@ -184,12 +184,14 @@ function cnt_inner_meta_box($post){
 	$name=get_post_meta($post_id,'name',true);
 	$phone=get_post_meta($post_id,'phone',true);
 	$mobile=get_post_meta($post_id,'mobile',true);
+	$email=get_post_meta($post_id,'email',true);
 	$address=get_post_meta($post_id,'address',true);
 	$massage=get_post_meta($post_id,'massage',true);
 	?>
  	<label for="name_field">خانم:</label></br><input type="text" name="name_field" id="name_field" value="<?php echo $name; ?>" size="40"/></br>
  	<label for="phone_field">تلفن ثابت:</label></br><input type="text" name="phone_field" id="phone_field" value="<?php echo $phone; ?>" size="40"/></br>
  	<label for="mobile_field">تلفن همراه:</label></br><input type="text" name="mobile_field" id="mobile_field" value="<?php echo $mobile; ?>" size="40"/></br>
+ 	<label for="email_field">ایمیل:</label></br><input type="text" name="email_field" id="email_field" value="<?php echo $email; ?>" size="40"/></br>
  	<label for="address_field">آدرس:</label></br><input type="text" name="address_field" id="address_field" value="<?php echo $address; ?>" size="40"/></br>
  	<label for="massage_field">متن پیام:</label></br><textarea  rows="5" cols="40" name="massage_field" id="massage_field"><?php echo $massage; ?></textarea>
 	<?php
@@ -206,11 +208,13 @@ function save_cnt_meta($post_id){
 			$name=$_POST['name_field'];
 			$phone=$_POST['phone_field'];
 			$mobile=$_POST['mobile_field'];
+			$email=$_POST['email_field'];
 			$address=$_POST['address_field'];
 			$massage=$_POST['massage_field'];
 			update_post_meta($post_id,'name',$name);
 			update_post_meta($post_id,'phone',$phone);
 			update_post_meta($post_id,'mobile',$mobile);
+			update_post_meta($post_id,'email',$email);
 			update_post_meta($post_id,'address',$address);
 			update_post_meta($post_id,'massage',$massage);
 		}else return;
@@ -223,5 +227,5 @@ function save_cnt_meta($post_id){
 add_shortcode('contactus','contact_us');
 
 function contact_us(){
-	return file_get_contents( get_template_directory() . '/contact.html');
+	return file_get_contents( get_template_directory() . '/form.html');
 }
