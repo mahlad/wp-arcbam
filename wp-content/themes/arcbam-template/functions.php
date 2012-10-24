@@ -138,19 +138,19 @@ function craet_learn_type(){
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'supports' => array('title','editor','excerpt','comments'),
-		'rewrite' => array('slug' => 'learn'),
+		'rewrite' => array('slug' => 'learning'),
 		'has_archive' => true,
 		'query_var' => true,
 		'can_export' => true,
 
 		);
-	register_post_type('learn', $args_ln);
+	register_post_type('learning', $args_ln);
 }
 /*--------Upload File Metaboxe---------*/
 add_action('add_meta_boxes','uplod_file_meta');
 add_action('save_post','save_upload_file_meta');
 function uplod_file_meta(){
-	add_meta_box('up_file','فایل متن کامل','inner_file_meta','learn','advanced','default');
+	add_meta_box('up_file','فایل متن کامل','inner_file_meta','learning','advanced','default');
 }
 function inner_file_meta($post){
 	
@@ -169,7 +169,7 @@ function save_upload_file_meta($post_id){
       return;
 	if(!wp_nonce_field(plugin_basename(__FILE__), 'wpnonce'))
 		return;
-	if('learn'==$_POST['post_type']){
+	if('learning'==$_POST['post_type']){
 		if(is_admin()){
 			$url_file=$_POST['url_file'];
 			update_post_meta($post_id,'url_file',$url_file);
