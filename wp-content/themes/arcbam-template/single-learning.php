@@ -1,10 +1,14 @@
 <?php 
-	include 'header.php';
-	include 'sidebar.php';
-	include 'bottom.php';
+	get_header();
+	get_sidebar();
+	get_template_part('bottom');
+	
 ?>
 <div class="content">
 	<div class="learning right">
+		<?php 
+
+		 ?>
 		<section class="part right">
 			<div class="line">
 			<div class="pic right">
