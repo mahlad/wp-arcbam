@@ -137,7 +137,7 @@ function craet_learn_type(){
 		'menu_position' => 25,
 		'capability_type' => 'post',
 		'hierarchical' => false,
-		'supports' => array('title','thumbnail','editor','author','excerpt','comments'),
+		'supports' => array('title','editor','excerpt','comments'),
 		'rewrite' => array('slug' => 'learn'),
 		'has_archive' => true,
 		'query_var' => true,
