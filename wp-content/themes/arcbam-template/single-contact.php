@@ -1,7 +1,9 @@
 <?php 
-	include 'header.php';
-	include 'sidebar.php';
-	include 'bottom.php';
+	get_header();
+	get_sidebar();
+	get_template_part('bottom');
+	$args = array( 'post_type' => 'contact', 'posts_per_page' =>1,'post_status' =>	'publish' );
+	$loop=new WP_Qery($args);
 ?>
 <div class="content">
 <table class="contact">
