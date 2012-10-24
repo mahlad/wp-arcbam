@@ -9,7 +9,6 @@
 <div class="content">
 	<div class="learning right">
 		<?php 
-		$counter=0;
 		while($loop->have_posts()):$loop->the_post();
 		if($counter%2==0)
 			$clas='right';
@@ -28,7 +27,6 @@
 				<a href='#' class='download left'>دریافت متن کامل</a>
 			</div>
 		</section>";
-		$counter++;
 		endwhile;
 		 ?>
 		
