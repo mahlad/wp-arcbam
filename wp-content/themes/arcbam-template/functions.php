@@ -188,7 +188,7 @@ function cnt_inner_meta_box($post){
 	$address=get_post_meta($post_id,'address',true);
 	$massage=get_post_meta($post_id,'massage',true);
 	?>
- 	<label for="name_field">خانم:</label></br><input type="text" name="name_field" id="name_field" value="<?php echo $name; ?>" size="40"/></br>
+ 	<label for="name_field">نام:</label></br><input type="text" name="name_field" id="name_field" value="<?php echo $name; ?>" size="40"/></br>
  	<label for="phone_field">تلفن ثابت:</label></br><input type="text" name="phone_field" id="phone_field" value="<?php echo $phone; ?>" size="40"/></br>
  	<label for="mobile_field">تلفن همراه:</label></br><input type="text" name="mobile_field" id="mobile_field" value="<?php echo $mobile; ?>" size="40"/></br>
  	<label for="email_field">ایمیل:</label></br><input type="text" name="email_field" id="email_field" value="<?php echo $email; ?>" size="40"/></br>

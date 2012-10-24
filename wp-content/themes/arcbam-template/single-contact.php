@@ -17,7 +17,7 @@
 
 	 ?>
 	<tr>
-		<td class="owninfo1"><p>خانم:</p></td>
+		<td class="owninfo1"><p>نام و نام خانوادگی:</p></td>
 		<td class="owninfo2"><p><?php echo get_post_meta($post_id, 'name',true); ?></p></td>
 		<td class="owninfo1"><p>شماره ثابت:</p></td>
 		<td class="owninfo2"><p><?php echo get_post_meta($post_id, 'phone',true); ?></p></td>
