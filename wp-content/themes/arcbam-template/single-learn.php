@@ -27,6 +27,7 @@
 				<a href='#' class='download left'>دریافت متن کامل</a>
 			</div>
 		</section>";
+		$counter++;
 		endwhile;
 		 ?>
 		
