@@ -8,8 +8,8 @@
 <b>Contributing</b>
 <ul>
 
-  <li>Check my project's website and report any bugs or ideas in <a href="https://github.com/1schools-projects/wp-arcbam/issues">issues</a></li>
-  <li>Check our project's source on <a href="https://github.com/1schools-projects/wp-arcbam">wp-arcbam</a></li>
+  <li>Check my project's website and report any bugs or ideas in <a href="https://github.com/1schools-projects/wp-arcbam/tree/master/wp-content/themes/arcbam-template/issues">issues</a></li>
+  <li>Check our project's source on <a href="https://github.com/1schools-projects/wp-arcbam/tree/master/wp-content/themes/arcbam-template">wp-arcbam</a></li>
 </ul>
 
 <b>Building Technologies</b>
