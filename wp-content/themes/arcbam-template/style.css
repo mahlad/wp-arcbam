@@ -355,7 +355,7 @@ section.smallpart ul.btn li:first-child{
 }
 
 section.smallpart div.next{
-	background: url(../images/arrow.png) no-repeat -30px 0;
+	background: url(images/arrow.png) no-repeat -30px 0;
 	width: 31px;
 	height:30px;
 	right:0px;
@@ -363,7 +363,7 @@ section.smallpart div.next{
 	opacity: 0;
 }
 section.smallpart div.prev{
-	background: url(../images/arrow.png) no-repeat 0px 0px;
+	background: url(images/arrow.png) no-repeat 0px 0px;
 	width: 30px;
 	height:30px;
 	right:535px;
