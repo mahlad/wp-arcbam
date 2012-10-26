@@ -1,6 +1,8 @@
 <?php 
 /*-----------General Settings----------*/
 add_theme_support('post-thumbnails');
+add_theme_support('menus');
+register_nav_menu('main_menu','it is in all pages');
 /*-----------Marketting Post type----------*/
 add_action('init','creat_marketting_type');
 function creat_marketting_type(){
