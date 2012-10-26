@@ -23,8 +23,9 @@
 				<div class='cover'></div>
 				<div class='context right overhidden txj'>";
 				the_excerpt();
+				$url=get_post_meta($post->ID,'profile_picture','true');
 				echo"</div>
-				<a href='#' class='download left'>دریافت متن کامل</a>
+				<a href='{$url['url']}' class='download left'>دریافت متن کامل</a>
 			</div>
 		</section>";
 		$counter++;
