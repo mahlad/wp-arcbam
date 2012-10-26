@@ -9,7 +9,7 @@
 <ul>
 
   <li>Check my project's website and report any bugs or ideas in <a href="https://github.com/1schools-projects/wp-arcbam/issues">issues</a></li>
-  <li>Check our project's source on <a href="https://github.com/1schools-projects/wp-arcbam">arcbam</a></li>
+  <li>Check our project's source on <a href="https://github.com/1schools-projects/wp-arcbam/tree/master/wp-content/themes/arcbam-template">wp-arcbam</a></li>
 </ul>
 
 <b>Building Technologies</b>

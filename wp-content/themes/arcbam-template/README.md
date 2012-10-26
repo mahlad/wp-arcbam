@@ -1,22 +1,24 @@
 <h3>ARCBAM Website: http://arcbam.com/</h3>
 
 =========================================
+<b>This repostory is wordpress of <a href="https://github.com/1schools-projects/arcbam">Arcbam</a> project.</b>
 
 <i>This website is for Mis Pahlavan,an interior designer, that wants to diplay her project and desig to others.</i>
 
 <b>Contributing</b>
 <ul>
 
-  <li>Check my project's website and report any bugs or ideas in <a href="https://github.com/1schools-projects/arcbam/issues">issues</a></li>
-  <li>Check our project's source on <a href="https://github.com/1schools-projects/arcbam">arcbam</a></li>
+  <li>Check my project's website and report any bugs or ideas in <a href="https://github.com/1schools-projects/wp-arcbam/issues">issues</a></li>
+  <li>Check our project's source on <a href="https://github.com/1schools-projects/wp-arcbam/tree/master/wp-content/themes/arcbam-template">wp-arcbam</a></li>
 </ul>
 
 <b>Building Technologies</b>
 
 <ul>
-  <li>Html5</li>
-  <li>CSS3</li>
-  <li>1Styles</li>
+  <li>zepto</li>
+  <li>javascript</li>
+  <li>PHP</li>
+  <li>Wordpress</li>
 </ul>
 <b>The Team:</b>
 <ul>
