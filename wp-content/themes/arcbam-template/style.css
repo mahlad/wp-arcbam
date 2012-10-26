@@ -501,7 +501,7 @@ table.contact{
 	float: right;
 	direction:rtl;
 }
-table.contact tr td p,table.contact tr td label{
+table.contact tr td p,table.contact tr td label,table.sendmail tr td p,table.sendmail tr td label{
 	font-weight: bold;
 }
 table.contact tr td{
@@ -515,7 +515,7 @@ div.picowner{
 	height: 166px;
 	margin:40px 30px 0 0;
 }
- table.contact tr td{
+ table.contact tr td,table.sendmail tr td{
 	text-align: right;
 }
 td.owninfo1{
@@ -539,6 +539,10 @@ div.peygham p{
 	font-weight: bold;
 	line-height: 30px;
 	direction: rtl;
+}
+table.sendmail{
+	direction:rtl;
+	margin: 0 30px;
 }
 td.submit input{
 	float: right;
