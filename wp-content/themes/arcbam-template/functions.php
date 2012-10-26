@@ -63,6 +63,14 @@ function metabox_setup() {
 		'advanced',		
 		'high'	
 	);
+	add_meta_box(
+		'gsp_post_meta2',
+		'فایل متن کامل',	
+		'metabox_content',		
+		'learn',				
+		'advanced',		
+		'high'	
+	);
 
 }
 
@@ -83,7 +91,7 @@ function metabox_content($post){
 
 function metabox_save($post_id){
 	if(!empty($_FILES['wp_custom_attachment']['name'])) {	
-		$supported_types = array('image/gif','image/bmp','image/jpeg','image/png');  		
+		$supported_types = array('image/gif','image/bmp','image/jpeg','image/png','application/pdf','application/msword');  		
 		$arr_file_type = wp_check_filetype(basename($_FILES['wp_custom_attachment']['name']));  
 		$uploaded_type = $arr_file_type['type'];  
 		if(in_array($uploaded_type, $supported_types)) {  
