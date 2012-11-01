@@ -210,8 +210,6 @@ function cnt_inner_meta_box($post){
 function save_cnt_meta($post_id){
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
       return;
-	if(!wp_nonce_field(plugin_basename(__FILE__), 'wpnonce'))
-		return;
 	if('contact'==$_POST['post_type'])
 	{
 		if ( is_admin() ){
